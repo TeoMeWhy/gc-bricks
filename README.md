@@ -60,7 +60,7 @@ Você pode conhecer mais sobre mim no [LinkedIn](https://www.linkedin.com/in/teo
 
 ## Como apoiar
 
-O Téo Me Why existe a partir do propósito de mudar vidas pelo ensino, desta forma, a melhor forma de apoiar o que estamos construindo é o compartilhamento e interações nas redes sociais. Talvez você na faça ideia o quanto sua curtida pode alcançar e transformar vidas.
+O Téo Me Why existe a partir do propósito de mudar vidas pelo ensino, assim, a melhor forma de apoiar o que estamos construindo é o compartilhamento e interações nas redes sociais. Talvez você não faça ideia o quanto sua curtida pode alcançar e transformar vidas.
 
 Para manter o ambiente que construiremos funcionando, existe um custo envolvido. Hoje, as assinaturas da Twitch são a principal forma que conseguimos deixar as contas equilibradas. Assim, você pode nos apoiar assinano nosso canal. Em troca da assinatura, você terá acesso à todo material criado na Twitch, e ficará livre dos ADs (propaganda) durante as transmissões.
 
