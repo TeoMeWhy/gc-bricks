@@ -2,15 +2,19 @@
 
 Aprendendo sobre Datalakes com dados de [Counter Strike](https://store.steampowered.com/app/730/CounterStrike_Global_Offensive/) da [Gamers Club (GC)](https://gamersclub.gg/).
 
+Lives na [Twitch](https://www.twitch.tv/teomewhy) todas terças e quintas às 9:00AM!
+
 ## Sumário
 
 * [1. Sobre o projeto](#sobre-o-projeto)
 
-* [2 Ferramentas utilizadas](#ferramentas-utilizadoas)
+* [2 Ferramentas utilizadas](#ferramentas-utilizadas)
 
 * [3 Sobre os dados](#sobre-os-dados)
 
 * [4 Sobre o autor](#sobre-o-autor)
+
+* [6 Como apoiar](#como-apoiar)
 
 ## Sobre o projeto
 
@@ -19,6 +23,8 @@ A ideia principal deste projeto é a criação de um Datalake utilizando os dado
 Todo conteúdo será realizado em lives na Twitch no canal [Téo Me Why](https://www.twitch.tv/teomewhy). Não há custo algum para assistir às lives nem mesmo cadastro é necessário. Mas para ter uma melhor experiência, o cadastro na Twitch te possibilita maiores iterações. Para acessar o conteúdo gravado, é necessário ser assinante do canal.
 
 Realizaremos desdes as primeiras ingestões de dados na camada `raw`, consolidação em DeltaLake para camada `bronze`, qualidade de dados e padronizações em `silver` e visões analíticas em `gold`. Assim, construiremos pipelines de dados end-to-end.
+
+Você pode conferir o andamento do nosso projeto por meio das [`issues`](https://github.com/TeoMeWhy/gc-bricks/issues) e também pelo [painel de nosso projeto](https://github.com/orgs/TeoMeWhy/projects/1).
 
 ## Ferramentas Utilizadas
 
@@ -51,3 +57,11 @@ Téo é Bacharel em Estatística e tem Pós Graduação em Data Science & Big Da
 Hoje, como Head of Data na Gamers Club, gostaria de contribuir ainda mais para a comunidade trazendo dados reais e aplicações com SQL, Python e Machine Learning.
 
 Você pode conhecer mais sobre mim no [LinkedIn](https://www.linkedin.com/in/teocalvo/) e [GitHub](https://github.com/teocalvo).
+
+## Como apoiar
+
+O Téo Me Why existe a partir do propósito de mudar vidas pelo ensino, desta forma, a melhor forma de apoiar o que estamos construindo é o compartilhamento e interações nas redes sociais. Talvez você na faça ideia o quanto sua curtida pode alcançar e transformar vidas.
+
+Para manter o ambiente que construiremos funcionando, existe um custo envolvido. Hoje, as assinaturas da Twitch são a principal forma que conseguimos deixar as contas equilibradas. Assim, você pode nos apoiar assinano nosso canal. Em troca da assinatura, você terá acesso à todo material criado na Twitch, e ficará livre dos ADs (propaganda) durante as transmissões.
+
+Prezamos pela transparência, assim, você pode conferir nossas [contas aqui](https://docs.google.com/spreadsheets/d/1V5e4aIJTLh1k7kFn_wj5Bn_7_9hDCml1eNcXdK6NhU8/edit?usp=sharing).
