@@ -20,7 +20,7 @@ Lives na [Twitch](https://www.twitch.tv/teomewhy) todas terças e quintas às 9:
 
 A ideia principal deste projeto é a criação de um Datalake utilizando os dados públicos que a Gamers Clube disponibilizou no Kaggle. É esperado que os exemplos construidos auxiliem os primeiros passos de quem se interesse pelo tema. Assim, começaremos do básico e evoluiremos em conjuto com a comunidade.
 
-Todo conteúdo será realizado em lives na Twitch no canal [Téo Me Why](https://www.twitch.tv/teomewhy). Não há custo algum para assistir às lives nem mesmo cadastro é necessário. Mas para ter uma melhor experiência, o cadastro na Twitch te possibilita maiores iterações. Para acessar o conteúdo gravado, é necessário ser assinante do canal.
+Todo conteúdo será realizado em lives na Twitch no canal [Téo Me Why](https://www.twitch.tv/teomewhy). Não há custo algum para assistir às lives nem mesmo cadastro é necessário. Mas para ter uma melhor experiência, o cadastro na Twitch te possibilita maiores iterações. Para ter acesso ao conteúdo gravado, é necessário ser assinante do canal.
 
 Realizaremos desdes as primeiras ingestões de dados na camada `raw`, consolidação em DeltaLake para camada `bronze`, qualidade de dados e padronizações em `silver` e visões analíticas em `gold`. Assim, construiremos pipelines de dados end-to-end.
 
