@@ -22,7 +22,7 @@ A ideia principal deste projeto é a criação de um Datalake utilizando os dado
 
 Todo conteúdo será realizado em lives na Twitch no canal [Téo Me Why](https://www.twitch.tv/teomewhy). Não há custo algum para assistir às lives nem mesmo cadastro é necessário. Mas para ter uma melhor experiência, o cadastro na Twitch te possibilita maiores iterações. Para ter acesso ao conteúdo gravado, é necessário ser assinante do canal.
 
-Realizaremos desdes as primeiras ingestões de dados na camada `raw`, consolidação em DeltaLake para camada `bronze`, qualidade de dados e padronizações em `silver` e visões analíticas em `gold`. Assim, construiremos pipelines de dados end-to-end.
+Realizaremos as primeiras ingestões de dados na camada `raw`, consolidação em DeltaLake para camada `bronze`, qualidade de dados e padronizações em `silver` e visões analíticas em `gold`. Assim, construiremos pipelines de dados end-to-end.
 
 Você pode conferir o andamento do nosso projeto por meio das [`issues`](https://github.com/TeoMeWhy/gc-bricks/issues) e também pelo [painel de nosso projeto](https://github.com/orgs/TeoMeWhy/projects/1).
 
