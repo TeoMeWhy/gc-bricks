@@ -65,3 +65,5 @@ O Téo Me Why existe a partir do propósito de mudar vidas pelo ensino, desta fo
 Para manter o ambiente que construiremos funcionando, existe um custo envolvido. Hoje, as assinaturas da Twitch são a principal forma que conseguimos deixar as contas equilibradas. Assim, você pode nos apoiar assinano nosso canal. Em troca da assinatura, você terá acesso à todo material criado na Twitch, e ficará livre dos ADs (propaganda) durante as transmissões.
 
 Prezamos pela transparência, assim, você pode conferir nossas [contas aqui](https://docs.google.com/spreadsheets/d/1V5e4aIJTLh1k7kFn_wj5Bn_7_9hDCml1eNcXdK6NhU8/edit?usp=sharing).
+
+Fique a vontade para contribuir com este documento, corrigindo erros de português e digitação. Bem como abertura de `issues` que acredita ser interessante resolvermos.
