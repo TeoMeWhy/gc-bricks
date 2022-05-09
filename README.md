@@ -17,8 +17,6 @@ Lives na [Twitch](https://www.twitch.tv/teomewhy) todas terças e quintas às 9:
 
 * [4 Sobre o autor](#sobre-o-autor)
 
-* [4 Sobre o autor](#sobre-o-autor)
-
 * [5 Como apoiar](#como-apoiar)
 
 ## Sobre o projeto
