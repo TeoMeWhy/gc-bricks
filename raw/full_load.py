@@ -1,8 +1,8 @@
 # %%
 
 import boto3
-import sqlalchemy
 import pandas as pd
+import sqlalchemy
 from tqdm import tqdm
 
 def save_s3(table, db_con, s3_client):
@@ -12,7 +12,7 @@ def save_s3(table, db_con, s3_client):
     s3_client.upload_file(filename, 'platform-datalake-teomewhy', f"raw/gc/full-load/{table}/full_load.csv")
     return True
 
-con = sqlalchemy.create_engine("sqlite:///../data/gc.db")
+con = sqlalchemy.create_engine("sqlite:///../data/full_load/gc.db")
 tables = con.table_names()
 s3_client = boto3.client('s3')
 
