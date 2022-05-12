@@ -1,0 +1,234 @@
+{
+    "fields": [
+
+        {
+            "metadata": {},
+            "name": "idLobbyGame",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "idPlayer",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "idRoom",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtKill",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtAssist",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtDeath",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtHs",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtBombeDefuse",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtBombePlant",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtTk",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtTkAssist",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qt1Kill",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qt2Kill",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qt3Kill",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qt4Kill",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qt5Kill",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtPlusKill",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "qtFirstKill",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "vlDamage",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtHits",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtShots",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtLastAlive",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtClutchWon",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtRoundsPlayed",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "descMapName",
+            "nullable": true,
+            "type": "string"
+        },
+        {
+            "metadata": {},
+            "name": "vlLevel",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtSurvived",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtTrade",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtFlashAssist",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtHitHeadshot",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtHitChest",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtHitStomach",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtHitLeftAtm",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtHitRightArm",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtHitLeftLeg",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "qtHitRightLeg",
+            "nullable": true,
+            "type": "float"
+        },
+        {
+            "metadata": {},
+            "name": "flWinner",
+            "nullable": true,
+            "type": "integer"
+        },
+        {
+            "metadata": {},
+            "name": "dtCreatedAt",
+            "nullable": true,
+            "type": "timestamp"
+        }
+    ],
+    "type": "struct"
+}

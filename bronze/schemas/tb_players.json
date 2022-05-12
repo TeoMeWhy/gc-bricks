@@ -1,0 +1,47 @@
+{
+    "fields": [
+        {
+            "metadata": {},
+            "name": "idPlayer",
+            "nullable": true,
+            "type": "string"
+        },
+        {
+            "metadata": {},
+            "name": "flFacebook",
+            "nullable": true,
+            "type": "string"
+        },
+        {
+            "metadata": {},
+            "name": "flTwitter",
+            "nullable": true,
+            "type": "string"
+        },
+        {
+            "metadata": {},
+            "name": "flTwitch",
+            "nullable": true,
+            "type": "string"
+        },
+        {
+            "metadata": {},
+            "name": "descCountry",
+            "nullable": true,
+            "type": "string"
+        },
+        {
+            "metadata": {},
+            "name": "dtBirth",
+            "nullable": true,
+            "type": "timestamp"
+        },
+        {
+            "metadata": {},
+            "name": "dtRegistration",
+            "nullable": true,
+            "type": "timestamp"
+        }
+    ],
+    "type": "struct"
+}
