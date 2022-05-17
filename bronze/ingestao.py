@@ -1,9 +1,10 @@
 # Databricks notebook source
+# DBTITLE 1,Imports
 from pyspark.sql import types
 from pyspark.sql import functions as F
 from pyspark.sql import window
 
-from delta.tables import * 
+from delta.tables import *
 
 import json
 import time
@@ -13,22 +14,20 @@ def import_schema(table_name):
         schema = json.load(open_file)
     return types.StructType.fromJson(schema)
 
-def table_exists(table_name):
-    query = f'''show tables from bronze_gc like '{table_name}' '''
+def table_exists(database, table):
+    query = f'''show tables from {database} like '{table}' '''
     df = spark.sql(query)
     return df.count() > 0
-  
+
 
 # COMMAND ----------
 
 # DBTITLE 1,Setup do job
-table_name = "tb_lobby_stats_player"
-
-id_field = ['idLobbyGame', 'idPlayer']
-strongly_date = 'dtCreatedAt'
+table_name = dbutils.widgets.get("table")
+id_field = dbutils.widgets.get("id_field").split(",")
+strongly_date = dbutils.widgets.get("strongly_date")
 
 full_load_path = f'/mnt/datalake/raw/gc/full-load/{table_name}'
-
 cdc_path = f'/mnt/datalake/raw/gc/cdc/{table_name}'
 
 table_schema = import_schema(table_name)
@@ -41,7 +40,7 @@ stream_schema = stream_schema.add('Op', data_type=types.StringType(), nullable=F
 # COMMAND ----------
 
 # DBTITLE 1,Carga full-load
-if not table_exists(table_name):
+if not table_exists("bronze_gc", table_name):
     print("Realizando a primeira carga...")
     df = spark.read.schema(table_schema).csv(full_load_path, header=True)
     df.write.format('delta').saveAsTable(f'bronze_gc.{table_name}')
@@ -60,11 +59,11 @@ def upsert_delta(df, batchId, delta_table, id_field, strongly_date):
                   .drop(F.col('rn')))
     
     (delta_table.alias("d")
-    .merge(cdc_data.alias("c"), join) 
-    .whenMatchedDelete(condition = "c.Op = 'D'")
-    .whenMatchedUpdateAll(condition = "c.Op ='U'")
-    .whenNotMatchedInsertAll(condition = "c.Op = 'I'")
-    .execute())
+                .merge(cdc_data.alias("c"), join) 
+                .whenMatchedDelete(condition = "c.Op = 'D'")
+                .whenMatchedUpdateAll(condition = "c.Op ='U'")
+                .whenNotMatchedInsertAll(condition = "c.Op = 'I'")
+                .execute())
 
     return None
 
