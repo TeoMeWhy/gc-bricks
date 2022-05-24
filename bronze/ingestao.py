@@ -84,6 +84,6 @@ stream = (df_stream.writeStream
 
 # COMMAND ----------
 
-time.sleep(60)
+time.sleep(60*5)
 stream.processAllAvailable()
 stream.stop()
