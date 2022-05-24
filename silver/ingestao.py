@@ -1,4 +1,6 @@
 # Databricks notebook source
+import time
+
 from pyspark.sql import functions as F
 from pyspark.sql import window
 
@@ -13,21 +15,23 @@ from gcutils import db
 # COMMAND ----------
 
 # DBTITLE 1,Parâmetros
-tb_origin = 'bronze_gc.tb_lobby_stats_player'
-tb_target = 'silver_gc.tb_lobby_stats_player'
+tb_origin = dbutils.widgets.get('tb_origin')
+tb_target = dbutils.widgets.get('tb_target')
 
-id_origin = 'idLobbyGame','idPlayer'
-id_target = 'idLobbyGame','idPlayer'
+id_origin = dbutils.widgets.get('id_origin')
+id_target = dbutils.widgets.get('id_target')
 
-strongly_date_origin = 'dtCreatedAt'
-strongly_date_target = 'dtCreatedAt'
+strongly_date_origin = dbutils.widgets.get('strongly_date_origin')
+strongly_date_target = dbutils.widgets.get('strongly_date_target')
 
 checkpoint_path = f'/mnt/datalake/silver/{tb_target.split(".")[-1]}_checkpoint'
+
+table = tb_target.split(".")[-1]
 
 # COMMAND ----------
 
 # DBTITLE 1,Full load
-query = db.import_query('queries/tb_lobby_stats_player.sql')
+query = db.import_query(f'queries/{table}.sql')
 
 if not db.table_exists(*tb_target.split('.'), spark):
     query = query.replace(" Op,", "")
@@ -39,7 +43,7 @@ if not db.table_exists(*tb_target.split('.'), spark):
 # COMMAND ----------
 
 # DBTITLE 1,Stream
-query = db.import_query('queries/tb_lobby_stats_player.sql')
+query = db.import_query(f'queries/{table}.sql')
 delta_table = DeltaTable.forName(spark, tb_target)
 
 def upsert_delta(df, batchId, query, delta_table, id_field, strongly_date):
@@ -68,7 +72,6 @@ def upsert_delta(df, batchId, query, delta_table, id_field, strongly_date):
                 .whenMatchedUpdateAll(condition = "c.Op ='U'")
                 .whenNotMatchedInsertAll(condition = "c.Op = 'I'")
                 .execute())
-
     return None
 
 df_stream = (spark.readStream
@@ -85,5 +88,6 @@ stream = (df_stream.writeStream
 
 # COMMAND ----------
 
+time.sleep(60*5)
 stream.processAllAvailable()
 stream.stop()
