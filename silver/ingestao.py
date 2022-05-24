@@ -24,7 +24,7 @@ id_target = dbutils.widgets.get('id_target')
 strongly_date_origin = dbutils.widgets.get('strongly_date_origin')
 strongly_date_target = dbutils.widgets.get('strongly_date_target')
 
-checkpoint_path = f'/mnt/datalake/silver/{tb_target.split(".")[-1]}_checkpoint'
+checkpoint_path = f'/mnt/datalake/silver/gc/{tb_target.split(".")[-1]}_checkpoint'
 
 table = tb_target.split(".")[-1]
 
