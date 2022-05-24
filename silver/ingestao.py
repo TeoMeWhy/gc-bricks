@@ -18,8 +18,8 @@ from gcutils import db
 tb_origin = dbutils.widgets.get('tb_origin')
 tb_target = dbutils.widgets.get('tb_target')
 
-id_origin = dbutils.widgets.get('id_origin')
-id_target = dbutils.widgets.get('id_target')
+id_origin = dbutils.widgets.get('id_origin').split(",")
+id_target = dbutils.widgets.get('id_target').split(",")
 
 strongly_date_origin = dbutils.widgets.get('strongly_date_origin')
 strongly_date_target = dbutils.widgets.get('strongly_date_target')
