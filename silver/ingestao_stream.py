@@ -25,25 +25,24 @@ strongly_date_origin = dbutils.widgets.get('strongly_date_origin')
 strongly_date_target = dbutils.widgets.get('strongly_date_target')
 
 checkpoint_path = f'/mnt/datalake/silver/gc/{tb_target.split(".")[-1]}_checkpoint'
-
 table = tb_target.split(".")[-1]
+database = "_".join(tb_target.split(".")[0].split("_")[1:])
 
 # COMMAND ----------
 
 # DBTITLE 1,Full load
-query = db.import_query(f'queries/{table}.sql')
+query = db.import_query(f'{database}/{table}.sql')
 
 if not db.table_exists(*tb_target.split('.'), spark):
-    query = query.replace(" Op,", "")
+    query_exec = query.replace(" Op,", "")
     print("Realizando a primeira carga...")
-    df = db.etl(query, tb_origin, spark)
+    df = db.etl(query_exec, tb_origin, spark)
     df.coalesce(1).write.mode('overwrite').format('delta').saveAsTable(tb_target)
     print("ok.")
 
 # COMMAND ----------
 
 # DBTITLE 1,Stream
-query = db.import_query(f'queries/{table}.sql')
 delta_table = DeltaTable.forName(spark, tb_target)
 
 def upsert_delta(df, batchId, query, delta_table, id_field, strongly_date):
@@ -88,6 +87,6 @@ stream = (df_stream.writeStream
 
 # COMMAND ----------
 
-time.sleep(60*7)
+time.sleep(60)
 stream.processAllAvailable()
 stream.stop()
